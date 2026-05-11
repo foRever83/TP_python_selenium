@@ -36,12 +36,12 @@ PASSWORD = credentials["credentials"]["PASSWORD"]
 
 ## Lancer le projet
 
-Pour lancer le projet, rendez vous dans le dossier TP1, puis lancez le fichier [main.py](TP1/test/main.py).
+Pour lancer le projet, rendez vous dans le dossier TP1, puis lancez le fichier [main.py](TP1/main.py).
 
 #### Exemple
 
 ````
-cd TP1/
+cd TP1
 python main.py
 ````
 
@@ -53,4 +53,19 @@ Si vous souhaitez exécuter une partie du projet en particulier, utilisez un arg
 # Pour n'executer que la partie "login"
 python main.py -t "login"
 ```
+
+### Nettoyer dossier screenshots/
+
+
+Pour nettoyer le dossier screenshots/ qui accumule des captures d'écran en cas d'erreur, executez le fichier clean_screenshots.sh (pour MacOS et Linux). Pour Windows, créez un fichier .bat qui permet de supprimer le contenu du dossier TP1/screenshots/ qui se créera automatiquement à l'execution du projet.
+
+#### Exemple
+
+```
+# Depuis le dossier racine
+cd TP1
+sh clean_screenshots.sh
+```
+
+
 
