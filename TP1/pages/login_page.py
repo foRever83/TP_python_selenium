@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import BasePage
-import time
 import yaml
 
 
@@ -26,7 +25,7 @@ class LoginPage(BasePage):
     PASSWORD_LOCATOR = (By.ID, "password")
     LOGIN_BUTTON_LOCATOR = (By.CSS_SELECTOR, ".fa-sign-in")
     MESSAGE_LOCATOR = (By.CLASS_NAME, 'subheader')
-    LOGOUT_BUTTON_LOCATOR = (By.CLASS_NAME, 'button')
+    LOGOUT_BUTTON_LOCATOR = (By.CSS_SELECTOR, '.button')
 
     def __init__(self, driver, timeout=10):
         super().__init__(driver, timeout)

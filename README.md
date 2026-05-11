@@ -17,7 +17,7 @@ pip install -r Requirements.txt
 ### Ajout des credentials
 
 Par mesure de sécurité, les login et mot de passe ont été sauvegardés dans un fichier yaml, nommé par défaut *credentials.yaml* qui n'a pas été ajouté à ce fichier.
-Veuillez créer localement ce fichier par vous même avec vos credentials (le fichier crednetials.yaml est contenu dans le fichier [.gitignore](.gitignore)) ou remplacez les lignes correspondantes dans le fichier [base_page.py](base_page.py)
+Veuillez créer localement ce fichier par vous même avec vos credentials (le fichier credentials.yaml est contenu dans le fichier [.gitignore](.gitignore)) ou remplacez les lignes correspondantes dans le fichier [pages/login_page.py](pages/login_page.py)
 
 ````
 # credentials.yaml
@@ -28,8 +28,29 @@ credentials:
 
 
 ```
-# base-page.py
-# class BasePage:
+# login_page.py
+# class LoginPage(BasePage):
 USERNAME = credentials["credentials"]["USERNAME"]
 PASSWORD = credentials["credentials"]["PASSWORD"]
 ```
+
+## Lancer le projet
+
+Pour lancer le projet, rendez vous dans le dossier TP1, puis lancez le fichier [main.py](TP1/test/main.py).
+
+#### Exemple
+
+````
+cd TP1/
+python main.py
+````
+
+Si vous souhaitez exécuter une partie du projet en particulier, utilisez un argument parmi "login", "dropdown" ou "add_remove_element". Par défaut, le projet execute l'argument "all" qui execute toutes les parties en même temps.
+
+#### Exemple
+
+```
+# Pour n'executer que la partie "login"
+python main.py -t "login"
+```
+

@@ -3,7 +3,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from pages.base_page import BasePage
-import time
 import yaml
 
 
@@ -12,15 +11,9 @@ global credentials
 with open("pages/urls.yaml", 'r') as stream:
     urls = yaml.safe_load(stream)
 
-with open("pages/credentials.yaml", 'r') as stream:
-    credentials = yaml.safe_load(stream)
-
 class DropdownPage(BasePage):
     #urls
     DROPDOWN_URL = urls["URLS"]["DROPDOWN_URL"]
-    #credentials
-    USERNAME = credentials["credentials"]["USERNAME"]
-    PASSWORD = credentials["credentials"]["PASSWORD"]
     #locators
     DROPDOWN_LIST = (By.ID, "dropdown")
     OPTION_1 = "Option 1"

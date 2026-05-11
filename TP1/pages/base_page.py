@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
 import yaml
 
 global urls
@@ -34,6 +33,14 @@ class BasePage:
     def click_button(self, element):
         button = self.wait.until(EC.element_to_be_clickable(element))
         button.click()
+
+    def find_all_elements(self, locator):
+        elements = self.driver.find_elements(*locator)
+        return elements
+
+    def check_length(self, container, lenght):
+        length_container = len(container)
+        assert length_container == lenght, f"Lenght of the container should be {lenght} but is {length_container}"
 
 
     
