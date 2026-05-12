@@ -57,6 +57,11 @@ class BasePage:
     def get_element(self, element_locator):
         element =  self.driver.find_element(*element_locator)
         return element
+    
+    def check_attribute(self, locator, attribute, expected_attribute):
+        input = self.get_element(locator)
+        value = input.get_attribute(attribute)
+        assert value == expected_attribute, f"Incorrect attribute {value} instead of expected {expected_attribute}"
 
 
     

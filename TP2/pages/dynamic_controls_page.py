@@ -9,9 +9,9 @@ with open("pages/urls.yaml", 'r') as stream:
     urls = yaml.safe_load(stream)
 
 
-class DynamicsControlsPage(BasePage):
+class DynamicControlsPage(BasePage):
     #urls
-    DYNAMICS_CONTROLS_URL = urls["DYNAMICS_CONTROLS_URL"]
+    DYNAMIC_CONTROLS_URL = urls["DYNAMIC_CONTROLS_URL"]
     #locators
     CHECKBOX_LOCATOR = (By.XPATH, "//input[@type = 'checkbox']")
     ADD_REMOVE_BUTTON = (By.XPATH, "//button[@onclick = 'swapCheckbox()']")
