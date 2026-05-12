@@ -82,6 +82,8 @@ def test_dropdown():
 
     except Exception as e:
         print(e)
+        screenshot_name = f"screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        driver.save_screenshot(f"screenshots/{screenshot_name}")
 
     finally:
         print("exiting driver")
@@ -129,6 +131,8 @@ def test_add_remove_elements():
 
     except Exception as e:
         print(e)
+        screenshot_name = f"screenshot_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        driver.save_screenshot(f"screenshots/{screenshot_name}")
 
     finally:
         print("exiting driver")

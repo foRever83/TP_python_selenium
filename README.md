@@ -1,6 +1,8 @@
 # README
 
-## Dépôt contenant les TPs python selenium.
+Dépôt contenant les TPs python selenium.
+
+## TP1
 
 ### Initialiser l'environnement du projet
 
@@ -67,5 +69,8 @@ cd TP1
 sh clean_screenshots.sh
 ```
 
+## TP2
 
+Pour lancer le TP2, effectuez les mêmes actions, en prenant soin de se rendre dansl e dossier TP2 au lieu du dossier TP1.
+Les arguments du fichier main.py sont désormais "dynamics_controls" , WIP.
 

@@ -1,0 +1,5 @@
+BASE_URL : https://the-internet.herokuapp.com/
+DYNAMICS_CONTROLS_URL : https://the-internet.herokuapp.com/dynamic_controls
+DYNAMIC_LOADING_URL : https://the-internet.herokuapp.com/dynamic_loading
+NOTIFICATION_MESSAGE_URL : https://the-internet.herokuapp.com/notification_message_rendered
+INFINITE_SCROLL_URL : https://the-internet.herokuapp.com/infinite_scroll
